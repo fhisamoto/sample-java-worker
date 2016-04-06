@@ -3,6 +3,7 @@ public class WorkerProcess {
     while (true) {
       try {
         Thread.sleep(1000);
+        System.out.println("lala");
       } catch (InterruptedException e) {
       }
       System.out.println("Worker process woke up");
