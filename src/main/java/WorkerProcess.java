@@ -1,7 +1,4 @@
-import org.quartz.Job;
 import org.quartz.JobDetail;
-import org.quartz.JobExecutionContext;
-import org.quartz.JobExecutionException;
 import org.quartz.Scheduler;
 import org.quartz.SchedulerException;
 import org.quartz.Trigger;
@@ -12,13 +9,6 @@ import static org.quartz.SimpleScheduleBuilder.simpleSchedule;
 import static org.quartz.TriggerBuilder.newTrigger;
 
 public class WorkerProcess {
-
-  static class HelloJob implements Job {
-    public void execute(JobExecutionContext context)
-            throws JobExecutionException {
-      System.out.println("Hello Quartz!");
-    }
-  }
 
   public static void main(String[] args) {
     JobDetail job = newJob(HelloJob.class)
