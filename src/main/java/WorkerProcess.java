@@ -13,7 +13,7 @@ import static org.quartz.TriggerBuilder.newTrigger;
 
 public class WorkerProcess {
 
-  class HelloJob implements Job {
+  static class HelloJob implements Job {
     public void execute(JobExecutionContext context)
             throws JobExecutionException {
       System.out.println("Hello Quartz!");
