@@ -59,6 +59,11 @@
                             <mainClass>WorkerProcess</mainClass>
                             <name>worker</name>
                         </program>
+
+                        <program>
+                            <mainClass>OtherWorkerProcess</mainClass>
+                            <name>other_worker</name>
+                        </program>
                     </programs>
                 </configuration>
                 <executions>
