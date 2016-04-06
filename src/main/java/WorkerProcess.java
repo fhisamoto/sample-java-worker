@@ -31,6 +31,7 @@ public class WorkerProcess {
             .build();
     try {
       Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
+      scheduler.start();
       scheduler.scheduleJob(job, trigger);
     } catch (SchedulerException e) {
       e.printStackTrace();
