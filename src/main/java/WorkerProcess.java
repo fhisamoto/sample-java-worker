@@ -1,3 +1,4 @@
+import jobs.HelloJob;
 import org.quartz.JobDetail;
 import org.quartz.Scheduler;
 import org.quartz.SchedulerException;
@@ -12,7 +13,6 @@ public class WorkerProcess {
 
   public static void main(String[] args) {
     JobDetail job = newJob(HelloJob.class).build();
-
 
     Trigger trigger = newTrigger().withIdentity("trigger1", "group1")
             .startNow()
